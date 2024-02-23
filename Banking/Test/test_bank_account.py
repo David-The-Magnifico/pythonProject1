@@ -1,22 +1,26 @@
 import unittest
 
 import account
-from Bank_Account import Bank_Account
+from account import account
+
+from Banking.Bank_Account import BankAccount
 
 
 class BankAccountTest(unittest.TestCase):
 
     def test_deposit_valid_amount_increases_balance(self):
-        # Arrange
-        account = BankAccount(1, "John", "1234")
-        initial_balance = account.get_balance()
-        deposit_amount = 100
-        expected_balance = initial_balance + deposit_amount
-        self.assertAlmostEquals(expected_balance, actual_balance)self.assertAlmostEquals(expected_balance, actual_balance)self.assertAlmostEquals(expected_balance, actual_balance)ce = initial_balance + deposit_amount
-        actual_balance = account.get_balance()
+    # Arrange
+    account = BankAccount(1, "John", "1234")
+    initial_balance = account.get_balance()
+    deposit_amount = 100
+    expected_balance = initial_balance + deposit_amount
 
-        # Assert
-        with self.assertRaises(ValueError):
+    # Act
+    account.deposit(deposit_amount)
+    actual_balance = account.get_balance()
+
+    # Assert
+    self.assertAlmostEquals(expected_balance, actual_balance)
     account.withdraw(withdraw_amount, "5678")
 
     def test_deposit_invalid_amount_throws_invalid_amount_exception(self):
