@@ -64,31 +64,3 @@ class Bank:
 
     def register(self, customer):
         raise ValueError("Customer")
-
-class Account:
-    def __init__(self, number, name, pin):
-        self.number = number
-        self.name = name
-        self.pin = pin
-        self.balance = 0
-
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-        else:
-            raise ValueError("Amount must be positive")
-
-    def withdraw(self, amount, pin):
-        if amount > 0:
-            if self.balance >= amount:
-                self.balance -= amount
-            else:
-                raise ValueError("Insufficient funds")
-        else:
-            raise ValueError("Amount must be positive")
-
-    def get_balance(self, pin):
-        if self.pin == pin:
-            return self.balance
-        else:
-            raise ValueError("Invalid pin")
