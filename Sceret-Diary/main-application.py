@@ -40,3 +40,11 @@ root.title("Diary Application")
 diary = None
 entry = None
 
+def create_diary():
+    global diary
+    username = username_entry.get()
+    password = password_entry.get()
+    diary = Diary(username, password)
+    messagebox.showinfo("Success", "Diary created successfully.")
+
+# Create GUI elements
