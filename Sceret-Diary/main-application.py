@@ -31,3 +31,6 @@ class Entry:
         self.title = title
         self.body = body
 
+    def getId(self):
+        return self.id
+
