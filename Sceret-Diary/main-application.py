@@ -34,3 +34,6 @@ class Entry:
     def getId(self):
         return self.id
 
+root = tk.Tk()
+root.title("Diary Application")
+
