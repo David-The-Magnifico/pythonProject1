@@ -7,3 +7,6 @@ class Diary:
         self.password = password
         self.entries = []
 
+    def addEntry(self, entry):
+        self.entries.append(entry)
+
