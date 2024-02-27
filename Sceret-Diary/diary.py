@@ -30,3 +30,6 @@ def setUsername(self, username):
 def getPassword(self):
     return self.password
 
+def setPassword(self, password):
+    self.password = password
+
