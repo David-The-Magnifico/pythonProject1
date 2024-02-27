@@ -60,3 +60,6 @@ def getAllDiaries():
             diaries.append(diary)
     return diaries
 
+def lock(self):
+    return None
+
