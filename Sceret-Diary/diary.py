@@ -27,3 +27,6 @@ def getUsername(self):
 def setUsername(self, username):
     self.username = username
 
+def getPassword(self):
+    return self.password
+
