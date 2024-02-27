@@ -58,3 +58,7 @@ password_label.pack()
 password_entry = tk.Entry(root, show="*")
 password_entry.pack()
 
+create_diary_button = tk.Button(root, text="Create Diary", command=create_diary)
+create_diary_button.pack()
+
+root.mainloop()
