@@ -19,3 +19,5 @@ def setTitle(self, title):
 def getBody(self):
     return self.body
 
+def setBody(self, body):
+    self.body = body
