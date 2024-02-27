@@ -16,3 +16,6 @@ def getTitle(self):
 def setTitle(self, title):
     self.title = title
 
+def getBody(self):
+    return self.body
+
