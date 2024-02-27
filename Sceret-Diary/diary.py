@@ -52,3 +52,11 @@ def deleteDiary(username):
 def setEntries(self, entries):
     self.entries = entries
 
+@staticmethod
+def getAllDiaries():
+    diaries = []
+    for diary in diaries:
+        if diary.getUsername():
+            diaries.append(diary)
+    return diaries
+
