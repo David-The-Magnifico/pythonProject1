@@ -13,11 +13,3 @@ def setId(self, id):
 def getTitle(self):
     return self.title
 
-def setTitle(self, title):
-    self.title = title
-
-def getBody(self):
-    return self.body
-
-def setBody(self, body):
-    self.body = body
