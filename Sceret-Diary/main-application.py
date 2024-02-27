@@ -25,3 +25,9 @@ class Diary:
 class Entry:
     nextId = 1
 
+    def __init__(self, title, body):
+        self.id = Entry.nextId
+        Entry.nextId += 1
+        self.title = title
+        self.body = body
+
