@@ -49,3 +49,6 @@ def deleteDiary(username):
     if diary:
         diary.setEntries([])
 
+def setEntries(self, entries):
+    self.entries = entries
+
