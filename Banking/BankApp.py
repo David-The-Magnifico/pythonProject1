@@ -79,48 +79,6 @@ class BankApp:
         finally:
             scanner.close()
 
-class Bank:
-    def __init__(self):
-        self.accounts = []
-
-    def register_customer(self, name, pin):
-        account = {"name": name, "pin": pin, "balance": 0.0}
-        self.accounts.append(account)
-
-    def deposit(self, account_number, amount):
-        for account in self.accounts:
-            if account["account_number"] == account_number:
-                account["balance"] += amount
-                return
-        raise ValueError("Invalid account number")
-
-    def withdraw(self, account_number, amount, pin):
-        for account in self.accounts:
-            if account["account_number"] == account_number and account["pin"] == pin:
-                if account["balance"] >= amount:
-                    account["balance"] -= amount
-                    return
-                else:
-                    raise ValueError("Insufficient funds")
-        raise ValueError("Invalid PIN")
-
-    def transfer(self, from_account_number, to_account_number, amount, pin):
-        self.withdraw(from_account_number, amount, pin)
-        self.deposit(to_account_number, amount)
-
-    def check_balance(self, account_number, pin):
-        for account in self.accounts:
-            if account["account_number"] == account_number and account["pin"] == pin:
-                return account["balance"]
-        raise ValueError("Invalid PIN")
-
-    def remove_account(self, account_number, pin):
-        for i, account in enumerate(self.accounts):
-            if account["account_number"] == account_number and account["pin"] == pin:
-                del self.accounts[i]
-                return
-        raise ValueError("Invalid PIN")
-
 if __name__ == "__main__":
     app = BankApp()
     app.main()
