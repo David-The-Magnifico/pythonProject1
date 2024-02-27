@@ -21,3 +21,6 @@ def unlockDiary(self, password):
     if self.password == password:
         self.locked = False
 
+def getUsername(self):
+    return self.username
+
