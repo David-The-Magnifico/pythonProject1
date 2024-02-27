@@ -33,3 +33,6 @@ def getPassword(self):
 def setPassword(self, password):
     self.password = password
 
+def getEntries(self):
+    return self.entries
+
