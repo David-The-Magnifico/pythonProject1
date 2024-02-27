@@ -48,3 +48,8 @@ def create_diary():
     messagebox.showinfo("Success", "Diary created successfully.")
 
 # Create GUI elements
+username_label = tk.Label(root, text="Username:")
+username_label.pack()
+username_entry = tk.Entry(root)
+username_entry.pack()
+
