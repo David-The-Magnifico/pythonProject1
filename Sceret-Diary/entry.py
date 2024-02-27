@@ -13,3 +13,6 @@ def setId(self, id):
 def getTitle(self):
     return self.title
 
+def setTitle(self, title):
+    self.title = title
+
