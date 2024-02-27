@@ -16,4 +16,6 @@ def findEntryById(self, id):
 def addEntry(self, entry):
     self.secretDiary.addEntry(entry)
 
-d
+def updateEntry(self, entry):
+    self.secretDiary.updateEntry(entry)
+
