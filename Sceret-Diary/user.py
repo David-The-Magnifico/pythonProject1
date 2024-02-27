@@ -7,3 +7,6 @@ def createDiary(self):
 def lockDiary(self):
     self.secretDiary.lock()
 
+def unlockDiary(self):
+    self.secretDiary.unlock()
+
