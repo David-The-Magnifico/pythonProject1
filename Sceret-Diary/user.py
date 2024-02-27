@@ -10,3 +10,6 @@ def lockDiary(self):
 def unlockDiary(self):
     self.secretDiary.unlock()
 
+def findEntryById(self, id):
+    return self.secretDiary.findEntryById(id)
+
