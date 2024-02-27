@@ -36,3 +36,10 @@ def setPassword(self, password):
 def getEntries(self):
     return self.entries
 
+@staticmethod
+def findDiaryByUsername(username):
+    for diary in Diary.getAllDiaries():
+        if diary.getUsername() == username:
+            return diary
+    return None
+
