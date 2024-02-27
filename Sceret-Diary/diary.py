@@ -17,3 +17,7 @@ def isLocked(self):
 def lockDiary(self):
     self.locked = True
 
+def unlockDiary(self, password):
+    if self.password == password:
+        self.locked = False
+
