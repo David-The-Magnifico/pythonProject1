@@ -43,3 +43,9 @@ def findDiaryByUsername(username):
             return diary
     return None
 
+@staticmethod
+def deleteDiary(username):
+    diary = Diary.findDiaryByUsername(username)
+    if diary:
+        diary.setEntries([])
+
