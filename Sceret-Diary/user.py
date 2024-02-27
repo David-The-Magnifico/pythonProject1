@@ -4,4 +4,6 @@ def createDiary(self):
     self.secretDiary = Diary()
     self.secretDiary.lock()
 
+def lockDiary(self):
+    self.secretDiary.lock()
 
