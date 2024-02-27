@@ -22,3 +22,6 @@ class Diary:
     def getEntries(self):
         return self.entries
 
+class Entry:
+    nextId = 1
+
