@@ -19,3 +19,6 @@ class Diary:
     def deleteEntry(self, id):
         self.entries = [entry for entry in self.entries if entry.getId() != id]
 
+    def getEntries(self):
+        return self.entries
+
