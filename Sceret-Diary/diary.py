@@ -66,3 +66,9 @@ def lock(self):
 def unlock(self):
     return None
 
+def updateEntry(self, entry):
+    for i in range(len(self.entries)):
+        if self.entries[i].getId() == entry.getId():
+            self.entries[i] = entry
+
+
