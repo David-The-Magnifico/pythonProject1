@@ -19,3 +19,5 @@ def addEntry(self, entry):
 def updateEntry(self, entry):
     self.secretDiary.updateEntry(entry)
 
+def deleteEntry(self, id):
+    self.secretDiary.deleteEntry(id)
