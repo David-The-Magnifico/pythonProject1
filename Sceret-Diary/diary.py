@@ -8,3 +8,6 @@ def findEntryById(self, id):
             return entry
     return None
 
+def deleteEntry(self, id):
+    self.entries = [entry for entry in self.entries if entry.getId() != id]
+
