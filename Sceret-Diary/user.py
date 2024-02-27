@@ -13,3 +13,7 @@ def unlockDiary(self):
 def findEntryById(self, id):
     return self.secretDiary.findEntryById(id)
 
+def addEntry(self, entry):
+    self.secretDiary.addEntry(entry)
+
+d
