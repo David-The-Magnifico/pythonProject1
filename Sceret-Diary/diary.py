@@ -63,3 +63,6 @@ def getAllDiaries():
 def lock(self):
     return None
 
+def unlock(self):
+    return None
+
