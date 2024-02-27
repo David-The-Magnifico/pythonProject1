@@ -11,3 +11,6 @@ def findEntryById(self, id):
 def deleteEntry(self, id):
     self.entries = [entry for entry in self.entries if entry.getId() != id]
 
+def isLocked(self):
+    return self.locked
+
