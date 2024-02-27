@@ -37,3 +37,6 @@ class Entry:
 root = tk.Tk()
 root.title("Diary Application")
 
+diary = None
+entry = None
+
