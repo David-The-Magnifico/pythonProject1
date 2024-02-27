@@ -14,3 +14,6 @@ def deleteEntry(self, id):
 def isLocked(self):
     return self.locked
 
+def lockDiary(self):
+    self.locked = True
+
