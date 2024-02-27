@@ -24,3 +24,6 @@ def unlockDiary(self, password):
 def getUsername(self):
     return self.username
 
+def setUsername(self, username):
+    self.username = username
+
