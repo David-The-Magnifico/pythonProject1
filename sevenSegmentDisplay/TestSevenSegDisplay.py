@@ -45,3 +45,8 @@ class TestSevenSegDisplay(unittest.TestCase):
         with self.assertRaises(ValueError):
             display.inputValue(value)
 
+    def test_inputValue_invalid_character(self):
+        display = SevenSegDisplay()
+        value = '1111111a'
+        with self.assertRaises(ValueError):
+            display.inputValue(value)
