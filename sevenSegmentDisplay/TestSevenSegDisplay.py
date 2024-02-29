@@ -39,3 +39,9 @@ class TestSevenSegDisplay(unittest.TestCase):
         display.inputValue(value)
         self.assertEqual(display.segment, [[1, 1, 1, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]])
 
+    def test_inputValue_invalid_length(self):
+        display = SevenSegDisplay()
+        value = '1111111111'
+        with self.assertRaises(ValueError):
+            display.inputValue(value)
+
