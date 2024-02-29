@@ -33,4 +33,9 @@ class TestSevenSegDisplay(unittest.TestCase):
         SevenSegDisplay.fillG()
         self.assertEqual(SevenSegDisplay.segment, [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 0]])
 
+    def test_inputValue_valid(self):
+        display = SevenSegDisplay()
+        value = '1111111'
+        display.inputValue(value)
+        self.assertEqual(display.segment, [[1, 1, 1, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]])
 
