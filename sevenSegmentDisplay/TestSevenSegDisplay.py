@@ -1,23 +1,11 @@
-import pytest
+import unittest
 
 from SevenSegDisplay import SevenSegDisplay
 
 
-class TestSevenSegDisplay:
-    def test_input_value_valid(self):
-        display = SevenSegDisplay()
-        value = '0110000'
-        display.inputValue(value)
-        assert display.segment == [[0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+class TestSevenSegDisplay(unittest.TestCase):
 
-    def test_input_value_invalid_length(self):
-        display = SevenSegDisplay()
-        value = '011000000'
-        with pytest.raises(ValueError):
-            display.inputValue(value)
+    def test_fillA(self):
+        SevenSegDisplay.fillA()
+        self.assertEqual(SevenSegDisplay.segment, [[1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
 
-    def test_input_value_invalid_character(self):
-        display = SevenSegDisplay()
-        value = '0110000a'
-        with pytest.raises(ValueError):
-            display.inputValue(value)
