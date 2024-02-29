@@ -29,3 +29,8 @@ class TestSevenSegDisplay(unittest.TestCase):
         SevenSegDisplay.fillF()
         self.assertEqual(SevenSegDisplay.segment, [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 1]])
 
+    def test_fillG(self):
+        SevenSegDisplay.fillG()
+        self.assertEqual(SevenSegDisplay.segment, [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 0]])
+
+
