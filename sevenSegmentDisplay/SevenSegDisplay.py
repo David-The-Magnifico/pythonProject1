@@ -59,11 +59,11 @@ class SevenSegDisplay:
     @staticmethod
     def inputValue(value):
         if len(value) > 9:
-            value = value[:9]
+            raise ValueError("Input length must be less than or equal to 9")
 
         for i in value:
             if i not in ['0', '1']:
-                raise ValueError("Input Must be 1 or 0")
+                raise ValueError("Input must contain only 0s and 1s")
 
         for i in range(len(value)):
             bit = value[i]
@@ -87,5 +87,8 @@ class SevenSegDisplay:
 if __name__ == "__main__":
     display = SevenSegDisplay()
     value = input("Enter binary Number: ")
-    display.inputValue(value)
-    display.display()
+    try:
+        display.inputValue(value)
+        display.display()
+    except ValueError as e:
+        print(f"Error: {e}")
