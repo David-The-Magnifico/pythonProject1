@@ -1,0 +1,2 @@
+class InvalidCellNumberException(Exception):
+    pass
