@@ -1,0 +1,2 @@
+class CellOccupiedException(Exception):
+    pass
