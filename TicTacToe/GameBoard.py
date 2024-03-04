@@ -9,3 +9,10 @@ class GameBoard:
             raise CellOccupiedException("Cell already occupied")
         self.board[row][col] = player
 
+    def is_full(self):
+        for row in self.board:
+            for cell in row:
+                if cell == ' ':
+                    return False
+        return True
+
