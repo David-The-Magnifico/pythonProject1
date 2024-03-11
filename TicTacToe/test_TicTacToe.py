@@ -9,8 +9,6 @@ class TicTacToeTest(unittest.TestCase):
     def test_make_move(self):
         board = GameBoard()
         players = Players("X", "O")
-
-        # Make a valid move
         players.make_move(board, 0, 0)
         self.assertEqual(board.board[0][0], "X")
 
