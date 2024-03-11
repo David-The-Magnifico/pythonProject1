@@ -11,8 +11,6 @@ class TicTacToeTest(unittest.TestCase):
         players = Players("X", "O")
         players.make_move(board, 0, 0)
         self.assertEqual(board.board[0][0], "X")
-
-        # Try to make a move outside the board
         with self.assertRaises(InvalidCellNumberException):
             players.make_move(board, -1, 0)
 
