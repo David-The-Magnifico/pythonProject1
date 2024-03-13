@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
+
 class Diary:
     def __init__(self, username, password):
         self.username = username
@@ -22,6 +23,7 @@ class Diary:
     def getEntries(self):
         return self.entries
 
+
 class Entry:
     nextId = 1
 
@@ -34,11 +36,13 @@ class Entry:
     def getId(self):
         return self.id
 
+
 root = tk.Tk()
 root.title("Diary Application")
 
 diary = None
 entry = None
+
 
 def create_diary():
     global diary
@@ -46,6 +50,7 @@ def create_diary():
     password = password_entry.get()
     diary = Diary(username, password)
     messagebox.showinfo("Success", "Diary created successfully.")
+
 
 # Create GUI elements
 username_label = tk.Label(root, text="Username:")

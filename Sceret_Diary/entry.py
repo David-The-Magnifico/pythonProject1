@@ -1,3 +1,10 @@
+from tkinter import Entry
+
+
+class Entry:
+    pass
+
+
 def __init__(self, title, body):
     self.id = Entry.nextId
     Entry.nextId += 1

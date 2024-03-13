@@ -1,4 +1,10 @@
-class user: def init(self): self.secretDiary = None
+class user: 
+    def init(self): self.secretDiary = None
+
+
+class Diary:
+    pass
+
 
 def createDiary(self):
     self.secretDiary = Diary()
